@@ -902,7 +902,7 @@
               },
               "limit": {
                 "type": "number",
-                "description": "The maximum number of records returned. The limit for getEvents can range from 1 to 10000 - an upper limit that is hardcoded in Stellar-RPC for performance reasons. If this argument isn't designated, it defaults to 100."
+                "description": "The maximum number of records returned. The limit for getLedgers can range from 1 to 200 - an upper limit that is hardcoded in Stellar-RPC for performance reasons. If this argument isn't designated, it defaults to 50."
               }
             }
           }
@@ -945,7 +945,7 @@
                   },
                   "headerXdr": {
                     "type": "string",
-                    "description": "The [LedgerHeader](https://github.com/stellar/stellar-xdr/blob/v22.0/Stellar-ledger.x#L74) structure for this ledger (base64-encoded string)."
+                    "description": "The [LedgerHeaderHistoryEntry](https://github.com/stellar/stellar-xdr/blob/v26.0/Stellar-ledger.x#L277) structure for this ledger (base64-encoded string)."
                   },
                   "metadataXdr": {
                     "type": "string",
@@ -1391,7 +1391,7 @@
               },
               "limit": {
                 "type": "number",
-                "description": "The maximum number of records returned. The limit for getEvents can range from 1 to 10000 - an upper limit that is hardcoded in Stellar-RPC for performance reasons. If this argument isn't designated, it defaults to 100."
+                "description": "The maximum number of records returned. The limit for getTransactions can range from 1 to 200 - an upper limit that is hardcoded in Stellar-RPC for performance reasons. If this argument isn't designated, it defaults to 50."
               }
             }
           }
@@ -2193,6 +2193,22 @@
             "title": "xdrFormat",
             "type": "string",
             "description": "Specifies whether XDR should be encoded as Base64 (default or 'base64') or JSON ('json')."
+          }
+        },
+        {
+          "name": "authMode",
+          "summary": "selects the authorization mode for simulation",
+          "required": false,
+          "description": "Specifies the authorization mode to use when simulating the transaction. The options are 'enforce' (default, enforces all authorization checks), 'record' (records authorization without enforcement), and 'record_allow_nonroot' (records authorization while allowing non-root invocations).",
+          "schema": {
+            "title": "authMode",
+            "type": "string",
+            "enum": [
+              "enforce",
+              "record",
+              "record_allow_nonroot"
+            ],
+            "description": "Specifies the authorization mode to use when simulating the transaction. 'enforce' (default) enforces authorization checks, 'record' records authorization without enforcing, and 'record_allow_nonroot' records authorization while allowing non-root invocations."
           }
         }
       ],

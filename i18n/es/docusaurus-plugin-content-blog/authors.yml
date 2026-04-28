@@ -1,13 +1,13 @@
-carsten-jacobsen:
+carstenjacobsen:
   name: Carsten Jacobsen
   title: Defensor Senior de Desarrolladores
-  url: https://github.com/carsten-jacobsen
-  image_url: https://github.com/carsten-jacobsen.png
+  url: https://github.com/carstenjacobsen
+  image_url: https://github.com/carstenjacobsen.png
   page: true
   socials:
-    github: carsten-jacobsen
-    x: carsten-jacobsen
-    linkedin: carsten-jacobsendk
+    github: carstenjacobsen
+    x: CarstenJacobsen
+    linkedin: carstenjacobsendk
 elliotfriend:
   name: Elliot Voris
   title: Defensor Principal de Desarrolladores
@@ -28,13 +28,13 @@ kalepail:
     github: kalepail
     x: kalepail
     linkedin: tyvdh
-chris-anatalio:
+anataliocs:
   name: Chris Anatalio
   title: Defensor Senior de Desarrolladores
-  url: https://github.com/chris-anatalio
-  image_url: https://github.com/chris-anatalio.png
+  url: https://github.com/anataliocs
+  image_url: https://github.com/anataliocs.png
   socials:
-    github: chris-anatalio
+    github: anataliocs
 naman:
   name: Naman Kumar
   title: Gerente de Producto
